@@ -1,0 +1,10 @@
+# macOS Finder
+.DS_Store
+
+# dotnet
+## MSBuild
+bin/
+obj/
+## Ionide
+.fake
+.ionide

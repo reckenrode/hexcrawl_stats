@@ -92,3 +92,11 @@ let encounter = random {
     | Location -> return Discovery Location
     | Other -> return! otherEncounter
 }
+
+let maybeEncounter = random {
+    match! uniformDiscrete (1, 8) with
+    | 1 ->
+        let! encounter = encounter
+        return Some encounter
+    | _ -> return None
+}
